@@ -1,4 +1,6 @@
-# simple-jira-issue-printer
+# Simple Jira Issue Printer
+
+A simple vanilla js app that prints jira issues
 
 I've written a little application that allows to print jira issues in a more customized style a depending on the type of the issue (Story, Bug, Task).
 
