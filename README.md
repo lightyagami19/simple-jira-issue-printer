@@ -10,7 +10,7 @@ It is free for personal and professional purpose.
 Since Jira Cloud API does not allow CORS requests you need to create a reverse proxy using nginx.
 
 
-Change `cards_printer.conf` with path for the application and your jira domain:
+Change `cards_printer_conf.conf` with path for the application and your jira domain:
 
 ```bash
 server {
