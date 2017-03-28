@@ -4,6 +4,8 @@ I've written a little application that allows to print jira issues in a more cus
 
 It is free for personal and professional purpose.
 
+![List of Jira Issues](cardlist.png)
+
 
 ### Installation
 
