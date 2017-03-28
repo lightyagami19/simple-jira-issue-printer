@@ -1,0 +1,195 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media print {
+  .logo {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+.task {
+  position: relative;
+  border: solid;
+  border-width: thin;
+  padding: 1cm;
+  width: 6cm;
+  height: 6cm;
+  list-style-type: none;
+  float: left;
+  display: inline;
+  page-break-inside: avoid;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0.1cm
+}
+
+.tasklist {
+  width: 22cm;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#status {
+  width: 90%;
+  border: 1px solid #000000;
+  padding: 5px;
+  margin: auto;
+  margin-top: 10px;
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+#status:empty {
+  display: none;
+}
+
+.task {
+  padding: 0;
+  border: 1px solid #000000;
+  width: 10.5cm;
+  height: 9cm;
+  float: left;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 16px;
+}
+
+.card_header {
+  border-bottom: 1px solid #000000;
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
+.card_header_Bug {
+  background-color: #D02828;
+}
+
+.card_header_Bug .logo {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD9klEQVRoQ+2Zj7EMQRDG+0WADIjAEwEiIANEgAgQASJABJ4IEAEiQASIgPptzXc1tzt/umf33iuvbqqu7q52Zrq/+frf9J7YJRknlwSHHYE4mHxgZg/N7DTN/Wpmb83snWNteMohGLlqZh8zAHOlAHTXzH6HtW0sOASQLw0QUuVTArMZlq2BXDczPpw2J18amBqs/UifTcBsDWQTpUY2yYFgEoxbIxslc7qXvmFFTl7yEdiAsQ8N5npq7OmbA/mbVkZZemxmT5JJ9YSXngPqlZm9Di7e03cNkF50Cuo1MRSJZlUgbHQzmVbNUaXc1iC0rxcMZotpfTazOyzOGSEk3k6nwu/WeG5mz6JH7pz/wszYvzVQnlxVBHJmZjjro5SBWxt5coVT78U0WOkFHHzyZaoSqB72GFk8bGgi+xxVtreuF3AodSiBnqZAsQdEdHlO5KKByCIIDpMbzJGTka84HP4igcjR/6QKYWJ3DoR4Tl6gQp1srzIUGHomMvJ858CVxTIr8g7uUARCRv6enuFwtTCszI058iFsrx3fUu3FYdaipthA1o28Vis5lVgh4wLGU24LGIJUFPKNmc4HJ85AWRWOvXDPfHIXvoGsPTZKpiWhMh0EEY75z0aEPBjIFUAx/q8dAIdZVc/UYdoXmW/Ss6Lp1cIcSqO8TAYTg5kpixaGikDmaS6mUmKTpMtA8ZxJZOaDtfgDMlWAsif/F/v24jUZFocqmchaBiLriVCYfDXj94BImHJMRPgWc3+m6Nn1IS8QlDp07qgBd+nompQkHIGstDHXYbsm/U+MHLIsV0muO/ZKghbLpyJXjOh2uLWQPOkeysfILacR0xotFCVjBEivgNwdfASIarAoa2uALGqqVTE6Laasp96JjjVAPNfuSZ8II9RCv6IoMhkjpnXNWX2HgIBBDYoInlFGqH7vewV5GYENOiwUkLVWaM98o4wQSfFLAHXvRD0glNn0r1rX3t6hjTKS70s5T7+reu9pAQFAXjZzj8e0YCTSnBsBQrSCEapu2j4a6AOgxSgB0U1QLLApG+T0RhJoFMiU4DJN0Qf5NEUYsEM/a8/cSkBoRXISXGb4LjUgEESC9Fy4okBqTY9c5uKN1xyIuo2AYGHrLu7NKxEgvbyRg9l1Ged5BAppBfG96+B1PNkDxgukB0KqEJLfJ9OiJTSZWM6IlHLXN1nGJ0zWzMwDxAtCYFT37dblQCLd+DlRUI4Tlhp1LSA4NgfYex8zl6dD3yXNHEjk/UjN4hCAn+WASkAAAIuAHxnN9yOj7xBLisAQtqyWKnM4KD4wH2WgJKP56o0F0RJk5ES3WKPDmPTtlShbCDyXPY5AzuWYA0L+AWDI4TPhUamRAAAAAElFTkSuQmCC);
+}
+
+.card_header_Story {
+  background-color: #71D161;
+}
+
+.card_header_Story .logo {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABBklEQVRoQ+2X0Q0CQQhE5zrQSowl2LklaCd2oLlf42UCDIGs3C/Lso8ZNnsbFvm2RTjAQN6JoA8ANwAvRY1KkP38MphKkCeAiwqmEuQM4K6CqQTZa59UMNUg+5xIYDqASGC6gIRhOoGEYLqBuGE6grhguoKYYTqD/IK5Hr3LKkE8b8XD8w6Ip52CnFEk88fKI9Ao8jeKsFvPah/WuDRrLQNi7Xh0fZoi0YNZ8weEDZ+1o9H1aYpEh93aqAGxdixqHZafpggrrI4PyN9YK3prfVuPNS7NWsuAqIeZ7ZemCCusjg8IGz51x9l+o8gowjzijI+1xlpO67C0sdYy1mJSt4mrX69lYB8CsVgzd2HE8gAAAABJRU5ErkJggg==);
+}
+
+.card_header_Task {
+  background-color: #00DFFC;
+}
+
+.card_header_Task .logo {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAB7ElEQVRoQ+2Z3TEFQRCFvxsBIRABMiACMkAEiAAZEAEiIAMyuESACMiAOlU7VVtds7Znq3ZnZm2/3Iednz7Tp3v63Fnht13gEdgCToF7/9TxR66cW2wC74B+g20DH875ow/zAlEkjow31QERAAFp2zVwNfoxJ2ygiIgulw1Nbs1cfVs3eRE+vQHKl6JMQL5a3FcCK5GD3QBnxuM94LUoFICA/BinLgAB2AeeB1DKrjcJZgHR6e6Y3RQV0U2lNpVS2YDIWYHZ6Dk6L6WyAZH/Sl4ldZelVKmsQATgBLiLICmySlk/7YVYTZXqA6LvKsHHzcAUSk1Snbo26WpRdJurjyruvkgFkvV0h2zubRqHrD3pnH8JJAgrNZJqYxZhNQbnvNRahNUYpx9bMwgrXYDfwIMZVJWwUrMYFN8irFqRzNb9zkZYiVYvcxFWMX3ezvuULjgbtYLDsxJWbS0SAHq1+lRXRnSf2M3+BBzORViJZhJWKgJVmLfXKh7MAqS0EC0RqTkis5G69sGnuqc3sSj2V2p1QGINpZ7ozkvKk1C19LzmlbqfjaLU+GJMQFKl7kGJrUvqG6KHUtn0iFfqeimVDYhX6noplQ2IErZP6nooFRI/KxA58ZfUFdCiqpQtl7ZpXKRu7gulq42vTur+At96eCeYWqEWAAAAAElFTkSuQmCC);
+}
+
+.card_header_Sub-task {
+  background-color: #00DFFC;
+}
+
+.card_header_Sub-task .logo {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAB7ElEQVRoQ+2Z3TEFQRCFvxsBIRABMiACMkAEiAAZEAEiIAMyuESACMiAOlU7VVtds7Znq3ZnZm2/3Iednz7Tp3v63Fnht13gEdgCToF7/9TxR66cW2wC74B+g20DH875ow/zAlEkjow31QERAAFp2zVwNfoxJ2ygiIgulw1Nbs1cfVs3eRE+vQHKl6JMQL5a3FcCK5GD3QBnxuM94LUoFICA/BinLgAB2AeeB1DKrjcJZgHR6e6Y3RQV0U2lNpVS2YDIWYHZ6Dk6L6WyAZH/Sl4ldZelVKmsQATgBLiLICmySlk/7YVYTZXqA6LvKsHHzcAUSk1Snbo26WpRdJurjyruvkgFkvV0h2zubRqHrD3pnH8JJAgrNZJqYxZhNQbnvNRahNUYpx9bMwgrXYDfwIMZVJWwUrMYFN8irFqRzNb9zkZYiVYvcxFWMX3ezvuULjgbtYLDsxJWbS0SAHq1+lRXRnSf2M3+BBzORViJZhJWKgJVmLfXKh7MAqS0EC0RqTkis5G69sGnuqc3sSj2V2p1QGINpZ7ozkvKk1C19LzmlbqfjaLU+GJMQFKl7kGJrUvqG6KHUtn0iFfqeimVDYhX6noplQ2IErZP6nooFRI/KxA58ZfUFdCiqpQtl7ZpXKRu7gulq42vTur+At96eCeYWqEWAAAAAElFTkSuQmCC);
+}
+
+.summary {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  padding: 0.5cm;
+  text-align: left;
+}
+
+.summary:empty {
+  display: none;
+}
+
+.description {
+  display: -webkit-box;
+  width: 9.5cm;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  margin: auto;
+  text-align: justify;
+}
+
+.description:empty {
+  display: none;
+}
+
+.logo {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: -20px;
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+}
+
+.card_header span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.points {
+  right: 0;
+  width: 1.5cm;
+  height: 1.2cm;
+  text-align: center;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  font-size: 28px;
+  position: absolute;
+  bottom: 0;
+}
+
+div.points:empty {
+  display: none;
+}
